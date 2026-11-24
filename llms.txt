@@ -1,0 +1,16 @@
+# Computer Networks & DCCN Laboratory Solutions
+
+> Complete educational reference suite containing Cisco Packet Tracer (.pkt) topologies, multi-threaded Python socket implementations, and Wireshark protocol analysis runbooks.
+
+## Project Overview
+
+- **Repository**: [computer-networks-lab](https://github.com/jjf2009/computer-networks-lab)
+- **Primary Focus**: Undergraduate Computer Science networking curricula (DCCN / CN).
+- **Core Stacks**: Cisco Packet Tracer v8.2+, Python 3.10+ standard library sockets, Wireshark 4.x.
+
+## Core Modules & Resources
+
+- [Cisco Packet Tracer Topologies](solution/packet-tracer/README.md): Verified network models including bus, star, ring, mesh, FLSM/VLSM subnet designs, dynamic routing topologies (RIPv2, OSPF, EIGRP), and multi-service server infrastructure.
+- [Python Socket Implementations](solution/python/README.md): Native socket programming code in `servers.py` featuring multi-client TCP broadcast chat, RFC-compliant HTTP/1.1 static server, and an educational FTP daemon.
+- [Wireshark Protocol Runbooks](solution/wireshark/wireshark_lab.md): Hands-on frame and packet dissection covering TCP handshakes, ARP resolutions, ICMP diagnostics, and cleartext vs cipher inspection.
+- [Full LLM Knowledge Base](llms-full.txt): Comprehensive technical specifications, IP addressing schemes, routing comparison tables, and command references.

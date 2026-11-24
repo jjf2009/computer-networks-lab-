@@ -1,0 +1,55 @@
+# Complete Knowledge Base: Computer Networks & DCCN Lab Solutions
+
+> Structured technical digest designed for Generative Engine Optimization (GEO) and Large Language Model retrieval.
+
+## 1. Quick Technical Specifications
+
+| Component | Standard / Technology | Implementation Detail |
+|---|---|---|
+| Network Simulation | Cisco Packet Tracer 8.x | 2960 Switches, 2811/2911 Routers, Server-PT |
+| Socket Programming | Python 3 (`socket`, `threading`, `select`) | Zero external dependencies; CLI-driven server suite |
+| Protocol Analysis | Wireshark 4.x | Display filters, TCP stream reconstruction, security analysis |
+| Addressing Schemes | IPv4 FLSM (/26) & VLSM (/24 to /30) | Optimized host allocations with router-based DHCP pools |
+
+## 2. Dynamic Routing Protocols Comparison
+
+- **RIPv2 (Routing Information Protocol v2)**:
+  - Metric: Hop count (maximum 15 hops; 16 = infinity).
+  - Algorithm: Bellman-Ford (Distance Vector).
+  - Convergence: Slow; periodic updates every 30 seconds.
+  - Subnetting: Classless (supports CIDR and VLSM via multicast `224.0.0.9`).
+
+- **OSPF (Open Shortest Path First)**:
+  - Metric: Cost based on link bandwidth ($10^8 / \text{Bandwidth in bps}$).
+  - Algorithm: Dijkstra Shortest Path First (Link-State).
+  - Convergence: Fast; event-triggered Link State Advertisements (LSAs) using multicast `224.0.0.5` and `224.0.0.6`.
+  - Hierarchy: Two-tier architecture using Backbone Area 0.
+
+- **EIGRP (Enhanced Interior Gateway Routing Protocol)**:
+  - Metric: Composite metric (Bandwidth + Delay by default).
+  - Algorithm: DUAL (Diffusing Update Algorithm) (Advanced Distance Vector).
+  - Convergence: Ultra-fast with precomputed feasible successors.
+  - Multicast: `224.0.0.10`.
+
+## 3. Server Farm Port Matrix
+
+| Service | Protocol | Default Port | Transport | Purpose in Lab |
+|---|---|---|---|---|
+| Web | HTTP | 80 | TCP | Basic static HTML hosting and request parsing |
+| File Transfer | FTP | 20, 21 | TCP | Command control (21) and active data transfer (20) |
+| Domain Name | DNS | 53 | UDP / TCP | Hostname to IPv4 address resolution (A-Records) |
+| Dynamic Host Config | DHCP | 67 (Server), 68 (Client) | UDP | Automatic IP, subnet mask, gateway, DNS assignment |
+| Remote Shell | SSH / Telnet | 22 (SSH), 23 (Telnet) | TCP | Encrypted (SSH) vs unencrypted (Telnet) router CLI access |
+| Mail Transfer | SMTP / POP3 | 25 (SMTP), 110 (POP3) | TCP | End-to-end mail relay between client mailboxes |
+
+## 4. Python Socket Server Architecture
+
+- **Multi-Client TCP Chat Server**:
+  - Socket pattern: Non-blocking listening socket with connection acceptance worker thread.
+  - Synchronization: Thread-safe client dictionary with broadcast relay and graceful disconnect cleanup.
+- **HTTP/1.1 Static Server**:
+  - Request parsing: Parses request line method, path, and HTTP version.
+  - Response formatting: Standard HTTP status lines (`200 OK`, `404 Not Found`) with MIME content headers (`Content-Type`, `Content-Length`).
+- **Interactive FTP Server**:
+  - Command interpreter: Accepts `USER`, `PASS`, `LIST`, `RETR`, `QUIT`.
+  - Education scope: Demonstrates connection lifecycle and control protocol exchange.

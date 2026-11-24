@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this repository for your academic coursework, research, or network simulations, please cite it as below."
+authors:
+  - family-names: "Computer Networks Lab Contributors"
+    given-names: "Data Communications & Computer Networks"
+title: "Computer Networks & DCCN Lab: Cisco Packet Tracer Topologies, Python Sockets & Wireshark Analysis"
+version: 1.1.0
+date-released: 2026-11-24
+url: "https://github.com/jjf2009/computer-networks-lab"
+repository-code: "https://github.com/jjf2009/computer-networks-lab"
+keywords:
+  - "computer-networks"
+  - "computer-networks-lab"
+  - "dccn"
+  - "dccn-lab-solutions"
+  - "cisco-packet-tracer"
+  - "packet-tracer-topologies"
+  - "python-socket-programming"
+  - "wireshark-packet-analysis"
+  - "subnetting-vlsm"
+  - "routing-protocols"
+  - "ospf"
+  - "ripv2"
+  - "eigrp"
+license: MIT
